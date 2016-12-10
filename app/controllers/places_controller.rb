@@ -11,7 +11,8 @@ class PlacesController < ApplicationController
   def create
     @place = Place.create(
                           name: params[:name],
-                          description: params[:description]
+                          description: params[:description],
+                          )
 
     redirect_to '/'
   end
@@ -29,8 +30,9 @@ class PlacesController < ApplicationController
     @place.update(
                   name: params[:name],
                   description: params[:description]
+                  )
 
-    redirect_to "/places/#{@place.id}"
+    redirect_to '/places/#{@place.id}'
   end
 
   def destroy

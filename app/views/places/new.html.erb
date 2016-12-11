@@ -1,1 +1,45 @@
-new.html.erb
+<h1>Create a New EZAbout Place</h1>
+<br>
+<%= form_tag "/places", method: :post do %>
+  <div>
+    <%= label_tag :Type, "Type: " %>
+    <%= select_tag :type, options_for_select([
+                                              "Choose Type",
+                                              "Access",
+                                              "Bathroom",
+                                              "Parking",
+                                              "Other"],
+                                              @place.type) %>
+  </div>
+  <br>
+  
+  <div>
+    <%= label_tag :latitude, "Latitude: " %>
+    <%= text_field_tag :latitude %>
+  </div>
+  <br>
+  <div>
+    <%= label_tag :longitude, "Longitude: " %>
+    <%= text_field_tag :longitude %>
+  </div>
+  <br>
+  <div>
+    <%= label_tag :street_address, "Street Address: " %>
+    <%= text_field_tag :street_address %>
+  </div>
+  <br>
+  <div>
+    <%= label_tag :city, "City: " %>
+    <%= text_field_tag :city %>
+  </div>
+  <br>
+  <div>
+    <%= label_tag :state, "State: " %>
+    <%= text_field_tag :state %>
+  </div>
+  <br>
+  <div>
+    <%= submit_tag "Submit", class: "btn btn-danger" %>
+  </div>
+<% end %>
+</div>

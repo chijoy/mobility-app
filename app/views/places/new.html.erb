@@ -39,6 +39,11 @@
   </div>
   <br>
   <div>
+    <%= label_tag :note, "Note: " %>
+    <%= text_field_tag :note %>
+  </div>
+  <br>
+  <div>
     <%= submit_tag "Submit", class: "btn btn-danger" %>
   </div>
 <% end %>

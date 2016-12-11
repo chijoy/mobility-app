@@ -2,14 +2,14 @@
 <br>
 <%= form_tag "/places", method: :post do %>
   <div>
-    <%= label_tag :type_of_acess, "Type of Acess: " %>
-    <%= select_tag :type_of_acess, options_for_select([
+    <%= label_tag :type_of_access, "Type of Access: " %>
+    <%= select_tag :type_of_access, options_for_select([
                                               "Choose Type",
                                               "Entrance",
                                               "Bathroom",
                                               "Parking",
                                               "Other"],
-                                              @place.type) %>
+                                              @place.type_of_access) %>
   </div>
   <br>
   

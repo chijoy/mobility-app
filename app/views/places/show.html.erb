@@ -1,1 +1,7 @@
-show.html.erb
+<h3>Type of Acess: <% if @place.type_of_access %> <%= @place.type_of_access %> <% else %>No Type Assigned<% end %></h3>
+<h3>Street Address: <% @place.street_address %> </h3>
+<h3>City: <% @place.city %> </h3>
+<h3>State: <% @place.state %> </h3>
+<h3>Note: <% if @place.note %> <%= @place.note %> <% else %>No Note Yet!<% end %> </h3>
+
+

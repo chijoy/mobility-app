@@ -2,10 +2,10 @@
 <br>
 <%= form_tag "/places", method: :post do %>
   <div>
-    <%= label_tag :Type, "Type: " %>
-    <%= select_tag :type, options_for_select([
+    <%= label_tag :type_of_acess, "Type of Acess: " %>
+    <%= select_tag :type_of_acess, options_for_select([
                                               "Choose Type",
-                                              "Access",
+                                              "Entrance",
                                               "Bathroom",
                                               "Parking",
                                               "Other"],
@@ -21,6 +21,16 @@
   <div>
     <%= label_tag :longitude, "Longitude: " %>
     <%= text_field_tag :longitude %>
+  </div>
+  <br>
+  <div>
+    <%= label_tag :name, "Name: " %>
+    <%= text_field_tag :name %>
+  </div>
+  <br>
+  <div>
+    <%= label_tag :description, "Description: " %>
+    <%= text_field_tag :description %>
   </div>
   <br>
   <div>

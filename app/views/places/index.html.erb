@@ -9,17 +9,16 @@
     </style>
   </head>
   <body>
-    <h3>My Google Maps Demo</h3>
     <div id="map"></div>
     <script>
       function initMap() {
-        var uluru = {lat: -25.363, lng: 131.044};
+        var wrigley = {lat: 41.9484, lng: -87.6553};
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 4,
-          center: uluru
+          center: wrigley
         });
         var marker = new google.maps.Marker({
-          position: uluru,
+          position: wrigley,
           map: map
         });
       }
